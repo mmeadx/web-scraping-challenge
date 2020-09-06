@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Quicksheet</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<!-- Header with Button -->
+<body>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+  </div>
+
+  <div class="container" id="latest">
+      <div class="col-md-12">
+          <h2 class="heading">Latest Mars News</h2>
+          <h3>{{mars.news_headline}}</h3>
+          <small>{{mars.news_p}}</small>
+      </div>
+  </div>
+
+
+  <!-- Featured Image and Facts Row -->
+  <div class="container" id="image_facts">
+    <div class="col-md-8">
+      <h2 class="heading">Featured Mars Image</h2>
+      <img id="featured_image" src="{{mars.featured_image_url}}">
+    </div>
+    <div class="col-md-4">
+        <h3>Mars Facts</h3>
+        
+        {{mars.html_facts_table}}
+    </div>
+  </div>
+</body>
+
+</html>
