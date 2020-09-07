@@ -31,13 +31,17 @@
   <div class="container" id="image_facts">
     <div class="col-md-8">
       <h2 class="heading">Featured Mars Image</h2>
-      <img id="featured_image" src="{{mars.featured_image_url}}">
+      <img class="col-md-8" src="{{mars.featured_image_url}}">
     </div>
     <div class="col-md-4">
         <h3>Mars Facts</h3>
         
-        {{mars.html_facts_table}}
+        <table>{{mars.html_facts_table}}</table>
     </div>
+  </div>
+  <div class="container">
+      <h1>Hemispheres</h1>
+      <img id="hemi_photos" src="{{mars.hemisphere_image_urls}}">
   </div>
 </body>
 
