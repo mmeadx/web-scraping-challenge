@@ -34,14 +34,19 @@
       <img class="col-md-8" src="{{mars.featured_image_url}}">
     </div>
     <div class="col-md-4">
-        <h3>Mars Facts</h3>
-        
-        <table>{{mars.html_facts_table}}</table>
+        <p><h3>Mars Facts</h3>
+        <table>
+          {{mars.html_facts_table}}
+        </table>
+      </p>
     </div>
   </div>
   <div class="container">
       <h1>Hemispheres</h1>
-      <img id="hemi_photos" src="{{mars.hemisphere_image_urls}}">
+      <img class="col-md-6" id="hemi_photos" src="{{mars.hemisphere_image_urls.0.img_url}}">
+      <img class="col-md-6" id="hemi_photos" src="{{mars.hemisphere_image_urls.1.img_url}}">
+      <img class="col-md-6" id="hemi_photos" src="{{mars.hemisphere_image_urls.2.img_url}}">
+      <img class="col-md-6" id="hemi_photos" src="{{mars.hemisphere_image_urls.3.img_url}}">
   </div>
 </body>
 
