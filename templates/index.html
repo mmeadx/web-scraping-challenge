@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mars Quicksheet</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <!-- Header with Button -->
@@ -25,28 +26,36 @@
           <small>{{mars.news_p}}</small>
       </div>
   </div>
-
-
   <!-- Featured Image and Facts Row -->
-  <div class="container" id="image_facts">
+  <div class="container">
     <div class="col-md-8">
       <h2 class="heading">Featured Mars Image</h2>
-      <img class="col-md-8" src="{{mars.featured_image_url}}">
+      <img src="{{mars.featured_image_url}}" width=100%>
     </div>
     <div class="col-md-4">
-        <p><h3>Mars Facts</h3>
-        <table>
-          {{mars.html_facts_table}}
+        <h3>Mars Facts</h3>
+        <table class="table">
+          {{mars.html_facts_table | safe}}
         </table>
-      </p>
     </div>
   </div>
-  <div class="container">
-      <h1>Hemispheres</h1>
-      <img class="col-md-6" id="hemi_photos" src="{{mars.hemisphere_image_urls.0.img_url}}">
-      <img class="col-md-6" id="hemi_photos" src="{{mars.hemisphere_image_urls.1.img_url}}">
-      <img class="col-md-6" id="hemi_photos" src="{{mars.hemisphere_image_urls.2.img_url}}">
-      <img class="col-md-6" id="hemi_photos" src="{{mars.hemisphere_image_urls.3.img_url}}">
+  <div style="text-align: center;" class="container">
+      <div class="row">
+        <div class="col-md-12">
+        <h1>Mars Hemispheres</h1>
+        </div>
+      </div>
+      {% for hemi in mars.hemisphere_image_urls %} 
+      <div class="col-md-6">
+        <div class="card border-secondary mb-3">
+        <img src="{{hemi.img_url}}" width=99% class="card-img-top" alt="{{hemi.name}}">
+        <div class="card-body text-secondary">
+          <h2 class="card-title">{{hemi.name}}</h2>
+        </div>
+      </div>
+      </div>
+      {% endfor %}
+      
   </div>
 </body>
 
