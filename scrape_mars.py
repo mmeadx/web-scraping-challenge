@@ -92,19 +92,19 @@ def scrape():
     
         list_dict = {}
 
-            # finding and clicking on the element holding Hemisphere (Splinter)
+        # find and click on the element holding Hemisphere (Splinter)
         browser.find_by_text(item.text).click()
-        # finding the image:
+        # find the image:
         image = browser.find_by_text('Sample').first
         
-        # adding k, v to the list_dict
+        # add name and img url to dictionary
         list_dict['name'] = item.text
         list_dict['img_url'] = image['href']
         
-        # appending results to the list
+        # append results to the list
         hemisphere_image_urls.append(list_dict)
     
-        # navigating back to previous url
+        # navigate back to previous url
         browser.back()
     
     mars["hemisphere_image_urls"] = hemisphere_image_urls
