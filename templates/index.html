@@ -43,18 +43,19 @@
       <div class="row">
         <div class="col-md-12">
         <h1>Mars Hemispheres</h1>
+        <hr>
         </div>
       </div>
       {% for hemi in mars.hemisphere_image_urls %} 
       <div class="col-md-6">
-        <div class="card border-secondary mb-3">
-        <img src="{{hemi.img_url}}" width=99% class="card-img-top" alt="{{hemi.name}}">
+        <div class="card">
+          <img src="{{hemi.img_url}}" width=100% class="card-img-top border" alt="{{hemi.name}}"></span>
         <div class="card-body text-secondary">
-          <h2 class="card-title">{{hemi.name}}</h2>
+          <h3 class="card-title" style="text-align: left;">{{hemi.name}}</h3>
         </div>
       </div>
       </div>
-      {% endfor %}
+      {% endfor %}  
       
   </div>
 </body>

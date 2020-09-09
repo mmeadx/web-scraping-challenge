@@ -70,7 +70,7 @@ def scrape():
     facts_df = facts_df.rename(columns={0:'Description', 1:'Mars'})
     facts_df.set_index('Description', inplace=True)
 
-    mars["html_facts_table"] = facts_df.to_html()
+    mars["html_facts_table"] = facts_df.to_html(classes="table table-bordered table-striped")
 
     # ------- MARS HEMISPHERES IMAGE GRAB -------
 
