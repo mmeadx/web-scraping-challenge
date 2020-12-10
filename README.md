@@ -17,7 +17,7 @@ _HTML_
 _jupyter notebook_
 
 
-**Final Page**
+# Final Page
 
 **_Scraped Data_**
 
@@ -28,6 +28,6 @@ _Featured Mars Image_ : [JPL.nasa.gov](https://www.jpl.nasa.gov/spaceimages/?sea
 _Mars Facts_ : [space-facts.com](https://space-facts.com/mars/)
 
 _Mars Hemispheres_ : [astrogeology.usgs.gov](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars)
- 
+
 ![Image of final page](https://github.com/mmeadx/web-scraping-challenge/blob/master/screenshots/MarsApp-Full.png?raw=true)
 
