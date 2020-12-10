@@ -1,9 +1,11 @@
 # Web Scraping
 
 **Project**
+
 Using a Flask server and Mongo DB - I built a web application that scrapes various websites for data related to the Mission to Mars and then displays the information in a single HTML page. 
 
 **Tools**
+
 _Python_
 
 _Flask_
